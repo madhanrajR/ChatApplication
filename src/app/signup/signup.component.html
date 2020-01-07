@@ -1,0 +1,33 @@
+<div class="login-page">
+  <div class="login-box">
+    <img src="assets/chat-illustration-2.svg" />
+    <div class="login-content">
+      <h1>Create an Account</h1>
+      <form >
+          <mat-form-field>
+              <input matInput #email placeholder="Email" type="email" />
+              <mat-error *ngIf="false">
+                Please enter a valid Email Address
+              </mat-error>
+            </mat-form-field>
+        <mat-form-field>
+          <input matInput #username placeholder="Username" type="string" />
+          <mat-error *ngIf="false">
+            Please enter a valid Username
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput #password placeholder="Password" type="Password" />
+          <mat-error *ngIf="false">
+            Please enter a Password
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="signupdetails(email.value,username.value,password.value)">SIGN UP</button>
+      </form>
+      <div>
+        <span>Do you have an account?</span>
+        <a routerLink="/login">Log in</a>
+      </div>
+    </div>
+  </div>
+</div>

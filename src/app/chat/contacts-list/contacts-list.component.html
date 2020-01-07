@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="contacts-title">Contacts</div>
+  <ul>
+    <li
+    *ngFor="let contact of user"
+      (click)="onUserSelected(contact)"
+      [ngClass]="{ active: contact._id === activeUser_id }"
+    >
+      <div class="image-container">
+        <img src="{{auth.baseurl}}getprofile/{{contact.username}}" width="36px" height="37px" />
+        <span
+          class="circle"
+          [ngClass]="contact.status === 'online' ? 'on' : 'off'"
+        ></span>
+      </div>
+      <div class="contacts-info">
+        <span class="status-title">{{ contact.username }}</span>
+        <!-- <span class="status-text">{{ contact.statusMessage }}</span> -->
+      </div>
+    </li>
+  </ul>
+</div>
