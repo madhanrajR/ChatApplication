@@ -25,7 +25,7 @@ export class ContactsListComponent implements OnInit, OnDestroy {
    user:any=[];
    activeUser_id:any;
    senderid :any;
-  constructor(readonly contactsService: ContactsService,private auth:AuthService,private http:HttpClient) {
+  constructor(public contactsService: ContactsService,public auth:AuthService,public http:HttpClient) {
     this.senderid = localStorage.getItem('userid');
     this.auth.loginname();
     this.http.get(this.auth.baseurl + 'listusers').subscribe((res:any[]) => {

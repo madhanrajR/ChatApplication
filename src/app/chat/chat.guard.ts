@@ -7,7 +7,7 @@ import { AuthService } from '../core/auth.service';
   providedIn: 'root'
 })
 export class ChatGuard implements CanActivate {
-  constructor(readonly auth: AuthService, readonly router: Router) {}
+  constructor(public auth: AuthService, public router: Router) {}
 
   canActivate() {
     console.log(this.auth.authentication());

@@ -42,7 +42,7 @@ export class ContactsService {
     CometChat.removeUserListener(listenerId);
   }
 
-  private setUserStatus(usr: CometChat.UserObj, status: string) {
+  public setUserStatus(usr: CometChat.UserObj, status: string) {
     console.log(`Setting status: ${status} for ${usr}`);
 
     if (!this.contacts) {

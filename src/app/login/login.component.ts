@@ -11,7 +11,7 @@ import { AuthService } from '../core/auth.service';
 export class LoginComponent {
   error: string;
 
-  constructor(readonly router: Router, readonly auth: AuthService) {}
+  constructor(public router: Router, public auth: AuthService) {}
 
   login(userId: string,password: string) {
     console.log(userId);

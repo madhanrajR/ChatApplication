@@ -27,7 +27,7 @@ export class AuthService {
   //public baseurl:string="http://10.10.0.142:3000/"
 
  // public Socket= io(this.baseurl)
-  constructor(private http:HttpClient,private route:Router) {
+  constructor(public http:HttpClient,public route:Router) {
     this.messages=[];
    this.currentusername=localStorage.getItem('username');
     // this.httpOptions = {

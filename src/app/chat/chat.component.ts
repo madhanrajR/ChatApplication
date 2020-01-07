@@ -20,8 +20,8 @@ export class ChatComponent implements OnInit, OnDestroy {
   fd = new FormData();
   imgsrc:any; 
   constructor(
-    readonly authService: AuthService,
-    readonly chatService: ChatService
+    public authService: AuthService,
+    public chatService: ChatService
   ) {
     //this.imgsrc=this.authService.baseurl+''
     this.authService.loginname();

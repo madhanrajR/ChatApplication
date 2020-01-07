@@ -7,7 +7,7 @@ import { AuthService } from '../core/auth.service';
   providedIn: 'root'
 })
 export class LoginGuard implements CanActivate, CanActivateChild, CanLoad {
-  constructor(readonly auth: AuthService, readonly router: Router) {}
+  constructor(public auth: AuthService, public router: Router) {}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {

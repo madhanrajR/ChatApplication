@@ -27,7 +27,7 @@ export class MessagesViewComponent implements OnChanges {
   messagesContainer: ElementRef<HTMLDivElement>;
   activeUser_id:any;
   selectedUserName1:any;
-  constructor(readonly authService: AuthService) {
+  constructor(public authService: AuthService) {
     this.activeUser_id = localStorage.getItem('userid');
     this.selectedUserName1=localStorage.getItem('receiverid');
     this.authService.loginname();
@@ -45,7 +45,7 @@ export class MessagesViewComponent implements OnChanges {
     }
   }
 
-  private scrollIntoView() {
+  public scrollIntoView() {
     console.log('changes1');
     if (this.messagesContainer) {
       const { nativeElement } = this.messagesContainer;
