@@ -59,6 +59,7 @@ export class MessagesViewComponent implements OnChanges {
     var data = {
       "senderid": localStorage.getItem('userid'),
       "receiverid": localStorage.getItem('receiverid'),
+      "sendername":localStorage.getItem('username'),
       "message": msg
     }
     this.authService.sendmsg(data).then(res => {

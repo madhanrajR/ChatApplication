@@ -82,6 +82,7 @@ photosubmit()
 {
   this.authService.photoapi(this.fd).then(res =>{
  console.log(res);
+ location.reload();
  this.getprofile()
   }).catch(e =>{
 console.log(e);
@@ -93,7 +94,7 @@ getprofile()
 {
   this.authService.allphoto().then(res =>{
     console.log(res);
-    location.reload();
+    // location.reload();
      }).catch(e =>{
    console.log(e);
    
