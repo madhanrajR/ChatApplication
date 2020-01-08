@@ -226,7 +226,9 @@ rendermsg() {
     // this.msg1 = res;
     res['data'].forEach(async (items) => {
       this.messages.push(items)
-      
+      setInterval(() => {
+        this.rendermsg1();
+      }, 1000);
 
     })
     this.msgstatus = true;
