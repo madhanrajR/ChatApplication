@@ -11,7 +11,7 @@
   <div
     *ngIf="authService.messages && authService.messages[0]; else noMessages"
     class="messages-container"
-    #scrollMe
+    #scrollMe [scrollTop]="scrollMe.scrollHeight"
   >
   <!-- <div
     class="messages-container"

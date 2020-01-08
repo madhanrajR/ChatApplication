@@ -12,8 +12,8 @@ import { MaterialModule } from './material.module';
 import { ContactsListComponent } from './chat/contacts-list/contacts-list.component';
 import { MessagesViewComponent } from './chat/messages-view/messages-view.component';
 import {HttpClientModule} from '@angular/common/http'
+import { ScrollToBottomDirective } from './chat/messages-view/scroll-to-bottom.directive';
 // import { AuthService } from './core/auth.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http'
     LoginComponent,
     SignupComponent,
     ContactsListComponent,
-    MessagesViewComponent
+    MessagesViewComponent,
+    ScrollToBottomDirective
   ],
   imports: [
     BrowserModule,

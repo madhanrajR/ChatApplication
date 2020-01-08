@@ -11,13 +11,15 @@ import {
 import { AuthService } from 'src/app/core/auth.service';
 import { CometChat } from '@cometchat-pro/chat';
 import { timer } from 'rxjs';
-
+import { ScrollToBottomDirective } from './scroll-to-bottom.directive';
 @Component({
   selector: 'app-messages-view',
   templateUrl: './messages-view.component.html',
   styleUrls: ['./messages-view.component.scss']
 })
 export class MessagesViewComponent implements OnChanges {
+  @ViewChild(ScrollToBottomDirective,{static: false})
+  scroll: ScrollToBottomDirective;
   @Input() messages: CometChat.TextMessage[] | null;
   @Input() selectedUserName: string;
 
